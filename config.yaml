@@ -1,0 +1,36 @@
+# Experiment configuration. Paths are relative to the repository root.
+
+data_dir: data            # extracted course archive (contains letters/, news/, sentiment/)
+cache_dir: cache          # embeddings (.npy), not versioned
+results_dir: results
+figures_dir: figures
+
+seed: 42
+sample_size: 10000        # identical random sample for all methods per corpus
+
+corpora: [letters, news, imdb]
+
+tfidf:
+  min_df: 5
+  max_df: 0.5
+  ngram_max: 2
+  max_features: 50000
+
+reduction_dims: 50
+
+embedding:
+  model: intfloat/multilingual-e5-base
+  prefix: "query: "       # e5 models expect a prefix; "query: " for symmetric tasks
+  max_seq_length: 512
+
+dbscan:
+  min_samples: [5, 10, 20]
+  sweep_min_samples: 10   # min_samples used for the eps sweep (H1, H2)
+  sweep_points: 30
+
+optics:
+  min_samples: 10
+  xi: [0.03, 0.05, 0.1]
+  min_cluster_size: 0.005 # share of n
+
+silhouette_sample_size: null   # null = exact on all points

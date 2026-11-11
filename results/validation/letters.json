@@ -1,0 +1,30 @@
+{
+  "corpus": "letters",
+  "n_records": 43958,
+  "labels": {
+    "author": {
+      "Virginia Woolf": 17112,
+      "Henrik Ibsen": 8069,
+      "James Joyce": 6141,
+      "Wilhelm Busch": 5645,
+      "Franz Kafka": 2518,
+      "Friedrich Schiller": 2405,
+      "Johann Wolfgang von Goethe": 2068
+    },
+    "lang": {
+      "en": 22667,
+      "de": 13046,
+      "da": 7551,
+      "fr": 304,
+      "it": 264,
+      "unknown": 122,
+      "hu": 3,
+      "sv": 1
+    }
+  },
+  "empty_texts": 0,
+  "words_median": 53.0,
+  "words_max": 277,
+  "sample_size": 10000,
+  "seed": 42
+}
